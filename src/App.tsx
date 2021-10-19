@@ -1,7 +1,21 @@
+import {useEffect, useState} from 'react';
 import * as Components from './App.styles';
+import { Item } from './types/Item';
+import { Category } from './types/Category';
+import { items } from './data/items';
+import { categories } from './data/categories';
+import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter';
 
 const App = () => {
-  return (
+    const [list, setList] = useState(items);
+    const [filteredList, setFilteredList] = useState<Item[]>([]);
+    const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
+
+    useEffect(() => {
+        setFilteredList(filterListByMonth(list, currentMonth))
+    }, [list, currentMonth]);
+
+    return (
       <Components.Container>
           <Components.Header>
             <Components.HeaderText>Sistema Financeiro</Components.HeaderText>
@@ -10,7 +24,7 @@ const App = () => {
               ....
           </Components.Body>
       </Components.Container>
-  );
+    );
 }
 
 export default App;
