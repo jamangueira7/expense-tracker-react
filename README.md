@@ -25,7 +25,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Um sistema finança pessoal em React.
 
-Canal [Bonieky Lacerda](https://www.youtube.com/watch?v=95sAtAareR8)
+Canal [Bonieky Lacerda](https://www.youtube.com/watch?v=_hytKpMc04E)
 
 <p align="center">
   <img alt="game" src=".github/project.PNG">
