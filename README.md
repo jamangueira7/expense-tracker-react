@@ -7,7 +7,7 @@
 
 <br>
 
-# Lista de tarefas (to do list) com React
+# Sistema de finança pessoal com React
 
 ## 🚀 Tecnologias
 
@@ -23,7 +23,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Uma lista de tarefas em React.
+Um sistema finança pessoal em React.
 
 Canal [Bonieky Lacerda](https://www.youtube.com/watch?v=95sAtAareR8)
 
