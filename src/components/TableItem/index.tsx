@@ -10,9 +10,17 @@ export const TableItem = ({ item }: Props) => {
     return (
         <Component.TableLine>
             <Component.TableColumn>{formatDate(item.date)}</Component.TableColumn>
-            <Component.TableColumn>{categories[item.category].title}</Component.TableColumn>
+            <Component.TableColumn>
+                <Component.Category color={categories[item.category].color}>
+                    {categories[item.category].title}
+                </Component.Category>
+            </Component.TableColumn>
             <Component.TableColumn>{item.title}</Component.TableColumn>
-            <Component.TableColumn>R$ {item.value}</Component.TableColumn>
+            <Component.TableColumn>
+                <Component.Value color={categories[item.category].expense ? 'red' : 'green'}>
+                    R$ {item.value}
+                </Component.Value>
+            </Component.TableColumn>
         </Component.TableLine>
     );
 }
