@@ -10,6 +10,8 @@ import { InfoArea } from './components/InfoArea';
 
 const App = () => {
     const [list, setList] = useState(items);
+    const [income, setIncome] = useState(0);
+    const [expense, setExpense] = useState(0);
     const [filteredList, setFilteredList] = useState<Item[]>([]);
     const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
 
@@ -30,6 +32,8 @@ const App = () => {
               <InfoArea
                   currentMonth={currentMonth}
                   onMonthChange={handleMonthChange}
+                  income={income}
+                  expense={expense}
               />
               <TableArea list={filteredList}/>
           </Components.Body>
